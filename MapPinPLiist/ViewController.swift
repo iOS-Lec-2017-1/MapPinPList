@@ -36,6 +36,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 let long = (item as AnyObject).value(forKey: "long")
                 let title = (item as AnyObject).value(forKey: "title")
                 let subTitle = (item as AnyObject).value(forKey: "subTitle")
+                let img = (item as AnyObject).value(forKey: "img")
                 
                 let annotation = MKPointAnnotation()
                 
