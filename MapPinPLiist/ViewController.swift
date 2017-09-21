@@ -36,7 +36,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 let long = (item as AnyObject).value(forKey: "long")
                 let title = (item as AnyObject).value(forKey: "title")
                 let subTitle = (item as AnyObject).value(forKey: "subTitle")
-                let img = (item as AnyObject).value(forKey: "img")
+                //let img = (item as AnyObject).value(forKey: "img")
                 
                 let annotation = MKPointAnnotation()
                 
@@ -63,7 +63,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
             print("contents의 값은 nil")
         }
         
+        // 전체 핀이 지도에 보이도록 함
         myMapView.showAnnotations(annotations, animated: true)
+        
+        //핀 하나가 자동으로 탭되도록 처리
+        myMapView.selectAnnotation(annotations[0], animated: true)
+        
         myMapView.addAnnotations(annotations)
 
     }
